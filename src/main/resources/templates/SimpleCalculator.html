@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Calculator</title>
+    <link href="/SimpleCalculator.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="setDefaultMode()">
+<div class="header">
+    <header>
+        <a href="http://localhost:8080/simple-calculator">Quick Calculator</a>
+    </header>
+</div>
+<hr>
+<div class="content">
+
+    <div class="cal">
+        <label for="mode" id="model">Mode</label>
+        <select id="mode" name="mode" required onchange="updateMode()">
+            <option value="basic">Basic</option>
+            <option value="fa">Factors</option>
+            <option value="roo">Solve Equation</option>
+            <option value="dif">Differentiate</option>
+            <option value="int">Integrate</option>
+            <option value="com">Complex Numbers</option>
+            <option value="pol">Polar Codinates</option>
+            <option value="fac">Factorials</option>
+            <option value="base">Base Convert</option>
+            <option value="tri">Trigonametry</option>
+        </select>
+        <button id="alfa" onclick="toggleAlphaMode()" >&alpha;</button> <br><br>
+        <div id="keys">
+            <button class="function" onclick="allClear()">AC</button>
+            <button class="function" onclick="appendToDisplay('x')">x</button>
+            <button class="function" onclick="appendToDisplay('^2')">x<sup>2</sup></button>
+            <button class="function" onclick="appendToDisplay('^')">&and;</button>
+            <button class="function" onclick="appendToDisplay('^-1')">x<sup>-1</sup></button>
+            <button class="function" onclick="factorialMethods()">!</button>
+            <button class="function" id="sin" onclick="toggleFunction('sin')" style="text-align: center;font-size: 18px;font-weight: bold">Sin</button>
+            <button class="function" id="cos" onclick="toggleFunction('cos')" style="text-align: center;font-size: 18px;font-weight: bold">Cos</button>
+            <button class="function" id="tan" onclick="toggleFunction('tan')" style="text-align: center;font-size: 18px;font-weight: bold">Tan</button>
+            <button class="function" onclick="appendToDisplay('(')">(</button>
+            <button class="function" onclick="appendToDisplay(')')">)</button>
+            <button class="function" onclick="piMethods()"><i>&pi;</i></button>
+            <button class="basic" onclick="appendToDisplay('1')">1</button>
+            <button class="basic" onclick="appendToDisplay('2')">2</button>
+            <button class="basic" onclick="appendToDisplay('3')">3</button>
+            <button class="basic" onclick="appendToDisplay('/')">&divide;</button>
+            <button class="function" onclick="appendToDisplay(',')">&comma;</button>
+            <button class="function" onclick="expMethods()"><i><b>e</b></i></button>
+            <button class="basic" onclick="appendToDisplay('4')">4</button>
+            <button class="basic" onclick="appendToDisplay('5')">5</button>
+            <button class="basic" onclick="appendToDisplay('6')">6</button>
+            <button class="basic" onclick="appendToDisplay('*')">&times;</button>
+            <button class="function" onclick="appendToDisplay('i')"><i>i</i></button>
+            <button class="function" onclick="logMethods()">log</button>
+            <button class="basic" onclick="appendToDisplay('7')">7</button>
+            <button class="basic" onclick="appendToDisplay('8')">8</button>
+            <button class="basic" onclick="appendToDisplay('9')">9</button>
+            <button class="basic" onclick="appendToDisplay('-')">&minus;</button>
+            <button class="function" onclick="calculatePercentage()">%</button>
+            <button class="function" onclick="getSqrt()">&radic;</button>
+            <button class="basic" onclick="appendToDisplay('0')">0</button>
+            <button class="basic" onclick="appendToDisplay('.')">&sdot;</button>
+            <button class="basic" id="eql" onclick="toggleFunction('eql')">&equals;</button>
+            <button class="basic" onclick="appendToDisplay('+')">&plus;</button>
+            <button class="function" onclick="deleteElement()">&#x2B05;</button>
+            <button class="function" id="ang" onclick="toggleFunction('ang')" style="text-align: center;font-size: 18px;font-weight: bold"></button>
+        </div>
+    </div>
+    <div class="display">
+        <input id="display" readonly>
+    </div>
+</div>
+<hr>
+<div class="footer">
+    <footer>
+        &copy;Quick Calculator Project 2023
+    </footer>
+</div>
+<script src="/jquery-3.7.1.min.js"></script>
+<script src="/algebrite.bundle-for-browser.js"></script>
+<script src="/math.js"></script>
+<script src="/SimpleCalculator.js"></script>
+</body>
+</html>

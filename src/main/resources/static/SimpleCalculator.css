@@ -1,0 +1,150 @@
+header,footer{
+    background-color:black;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    height: 70px;
+    display: flex;
+}
+footer{
+
+    align-items: center;
+    justify-content: center;
+}
+header{
+    align-items: center;
+}
+a{
+    background-color:#777777;
+    text-decoration:none;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+a:hover{
+    background-color: #cccc;
+}
+
+
+
+.content{
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: slategray;
+    border: none;
+    border-radius: 10px;
+}
+.cal{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    flex: 1;
+}
+.display{
+    padding: 20px;
+    flex: 2;
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    padding:10px;
+}
+#model, #mode{
+    padding: 10px;
+    font-size: 20px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+#mode:hover{
+    background-color: cadetblue;
+}
+
+#display{
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    width: 95%;
+    overflow-y: auto;
+    padding: 10px;
+}
+button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.basic{
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size:19px;
+}
+.function{
+    border: none;
+    background-color: orange;
+    color: black;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+}
+.basic:hover{
+    background-color: grey;
+}
+.function:hover{
+    background-color: rgba(255,222,83,0.92);
+}
+#sin,#cos,#tan{
+    font-size: 18px;
+}
+#alfa{
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: orange;
+    padding: 10px;
+    color: black;
+    margin-left: 25px;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;;
+}
+#alfa:hover{
+    background-color: rgba(255,222,83,0.92);
+}
+
+.alpha-mode #alfa {
+    background-color: lime !important; /* Add !important to ensure specificity */
+}
+
+.alpha-mode #alfa:hover {
+    background-color: chartreuse;
+}
+
+.alpha-mode #sin,
+.alpha-mode #cos,
+.alpha-mode #tan {
+    background-color: yellow;
+}
+
+.alpha-mode #sin:hover,
+.alpha-mode #cos:hover,
+.alpha-mode #tan:hover {
+    background-color: lemonchiffon;
+}
+
